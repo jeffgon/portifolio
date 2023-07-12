@@ -17,18 +17,18 @@ function App() {
     <>
       <Container>
         <Buttons>
-          <LinkBotoes to='about' smooth={true} duration={500}>
-            Sobre
-          </LinkBotoes>
-          <LinkBotoes to='skills' smooth={true} duration={500}>
-            Habilidades
-          </LinkBotoes>
-          <LinkBotoes to='projects' smooth={true} duration={500}>
-            Projetos
-          </LinkBotoes>
-          <LinkBotoes to='contact' smooth={true} duration={500}>
-            Contato
-          </LinkBotoes>
+            <LinkBotoes to='about' smooth={true} duration={500}>
+              Sobre
+            </LinkBotoes>
+            <LinkBotoes to='skills' smooth={true} duration={500}>
+              Habilidades
+            </LinkBotoes>
+            <LinkBotoes to='projects' smooth={true} duration={500}>
+              Projetos
+            </LinkBotoes>
+            <LinkBotoes to='contact' smooth={true} duration={500}>
+              Contato
+            </LinkBotoes>      
         </Buttons>
 
         <Home id='contact'>
@@ -149,15 +149,16 @@ const Container = styled.div`
 
 const Buttons = styled.div`
   display: flex;
-  height: 40px;
+  height: auto;
   margin-top: 0;
+  justify-content: center;
   background-color: #0a0d22;
-  justify-content: flex-end;
+  flex-wrap: wrap;
 `;
 
 const LinkBotoes = styled(Link)`
   font-family: 'Teko', sans-serif;
-  margin: 10px;
+  margin: 5px;
   color: white;
   font-size: 30px;
   text-align: center;
@@ -228,7 +229,7 @@ const LinkGit = styled.a`
 const About = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -254,10 +255,12 @@ const About = styled.div`
     text-align: center;
   }
   img {
-    margin-top: 30px;
-    margin-right: 15px;
-    width: 350px;
-    height: 250px;
+    max-width: 95%;
+    margin: 5px;
+    width: 300px;
+    height: auto;
+    max-width: 100%; 
+    width: 40vw;
   }
 `;
 
@@ -308,6 +311,7 @@ const OneProject = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   p {
     font-family: 'Teko', sans-serif;
@@ -335,6 +339,7 @@ const SecondProject = styled.div`
   border-radius: 5px;
   div {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
