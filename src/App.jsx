@@ -152,13 +152,13 @@ const Buttons = styled.div`
   height: auto;
   margin-top: 0;
   justify-content: center;
-  background-color: #0a0d22;
+  background-color: #0B3C5E;
   flex-wrap: wrap;
 `;
 
 const LinkBotoes = styled(Link)`
   font-family: 'Teko', sans-serif;
-  margin: 5px;
+  margin: 15px;
   color: white;
   font-size: 30px;
   text-align: center;
@@ -183,7 +183,7 @@ const Home = styled.div`
   align-items: center;
   width: 100%;
   height: 100vh;
-  background-color: #0a0d22;
+  background-color: #0B3C5E;
   div {
     display: flex;
     flex-direction: column;
@@ -234,7 +234,7 @@ const About = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0B3C5E;
+  background-color: #0a0d22;
   flex-direction: column;
   div {
     position: absolute;
@@ -290,7 +290,7 @@ const Icones = styled.div`
 
 const Projects = styled.div`
   width: 100%;
-  height: 140vh;
+  height: auto;
   min-height: 100vh;
   background-color: #172042;
   display: flex;
