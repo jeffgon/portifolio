@@ -108,7 +108,7 @@ function App() {
               responsiva. No servidor, utilizei Node.js e o banco
               de dados MongoDB. O app oferece visão geral
               das finanças, acompanhamento do saldo e
-              análise das transações. Deploy: <LinkGit href='https://my-wallet-git-main-jeffgon.vercel.app/' target='_blank'>my-wallet-git-main-jeffgon.vercel.app/</LinkGit>
+              análise das transações. Deploy: <LinkGit href='https://my-wallet-jeffgon.vercel.app/' target='_blank'>my-wallet-jeffgon.vercel.app</LinkGit>
             </p>
 
             <div>
