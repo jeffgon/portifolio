@@ -5,10 +5,7 @@ import giphy from './assets/giphy.gif';
 import github from './assets/github.png';
 import linkedin from './assets/linkedin.png';
 import gmail from './assets/gmail.png';
-import mw1 from './assets/mw1.png';
-import mw3 from './assets/mw3.png';
-import mw4 from './assets/mw4.png';
-import mw5 from './assets/mw5.png';
+import gifmywallet from "./assets/gifmywallet.gif";
 import g2 from './assets/g2.png';
 import g3 from './assets/g3.png';
 
@@ -64,16 +61,17 @@ function App() {
 
         <Skills id='skills'>
           <div>
-            <p>🔨 Tools: Linux, VSCode, Docker</p>
+            <p>🔨 Ferramentas: Linux, VSCode, Docker, Git</p>
             <Icones>
               <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/linux/linux-original.svg' />
               <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/vscode/vscode-original-wordmark.svg' />
               <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original.svg' />
+              <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/git/git-original.svg' />
             </Icones>
           </div>
 
           <div>
-            <p>💻 Front-End: HTML, Css, Javascript, React</p>
+            <p>💻 Front-End: HTML, CSS, Javascript, React</p>
             <Icones>
               <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-original-wordmark.svg' />
               <img height='70' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original-wordmark.svg' />
@@ -83,16 +81,17 @@ function App() {
           </div>
 
           <div>
-            <p>💻 Back-Ends and APIS: Nodejs, Express, Typescript</p>
+            <p>💻 Back-End e API's: Nodejs, Express, Typescript, Testes de Integração (Jest)</p>
             <Icones>
               <img height='80' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/nodejs/nodejs-original-wordmark.svg' />
-              <img height='45' src='https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png' />
+              <img height='15' src='https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png' />
               <img height='60' src='https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg' />
+              <img height='60' src='https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/jest/jest-plain.svg' />
             </Icones>
           </div>
 
           <div>
-            <p>💻 Databases and Modeling: MongoDB, Postgresql, Prisma</p>
+            <p>💻 Banco de Dados e Modelagem: Relacionais (Postgresql) e Não Relacionais (MongoDB), Prisma</p>
             <Icones>
               <img height='60' src='https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-plain-wordmark.svg' />
               <img height='60' src='https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-plain-wordmark.svg' />
@@ -109,14 +108,11 @@ function App() {
               responsiva. No servidor, utilizei Node.js e o banco
               de dados MongoDB. O app oferece visão geral
               das finanças, acompanhamento do saldo e
-              análise das transações. Repositório Github: <LinkGit href='https://github.com/jeffgon/mywallet' target='_blank'>https://github.com/jeffgon/mywallet</LinkGit>
+              análise das transações. Deploy: <LinkGit href='https://my-wallet-git-main-jeffgon.vercel.app/' target='_blank'>my-wallet-git-main-jeffgon.vercel.app/</LinkGit>
             </p>
 
             <div>
-              <img height='50' src={mw1} />
-              <img height='50' src={mw3} />
-              <img height='50' src={mw4} />
-              <img height='50' src={mw5} />
+              <img height="50" src={gifmywallet} alt="Animação do exemplo" />
             </div>
           </OneProject>
 
@@ -171,7 +167,8 @@ const Contact = styled.section`
   align-items: center;
   img {
     width: 75px;
-    height: 75px;
+    height: auto;
+    max-width: 100%;
     cursor: pointer;
   }
 `;
@@ -184,6 +181,10 @@ const Home = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #0B3C5E;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
   div {
     display: flex;
     flex-direction: column;
@@ -227,7 +228,6 @@ const LinkGit = styled.a`
 `;
 
 const About = styled.div`
-  position: relative;
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -236,32 +236,31 @@ const About = styled.div`
   justify-content: center;
   background-color: #0a0d22;
   flex-direction: column;
-  div {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: 100%;
-    margin: 5px;
-  }
-  p {
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    font-family: 'Teko', sans-serif;
-    flex-shrink: 0;
-    text-align: center;
-  }
-  img {
-    max-width: 95%;
-    margin: 5px;
-    width: 300px;
-    height: auto;
-    max-width: 100%; 
-    width: 40vw;
-  }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 95%;
+      max-width: 1200px; 
+      margin: 5px;
+    }
+    p {
+      color: white;
+      text-align: center;
+      font-size: 25px;
+      font-family: 'Teko', sans-serif;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      margin: 5px;
+      width: 300px;
+      width: 40vw;
+      max-width: 100%;
+      height: auto;
+    }
 `;
 
 const Skills = styled.div`
@@ -272,7 +271,7 @@ const Skills = styled.div`
   width: 100%;
   height: 100vh;
   min-height: 100vh;
-  background-color: #01040B;
+  background-color: #144258;
   p {
     color: white;
     font-size: 20px;
@@ -283,8 +282,11 @@ const Icones = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   img {
     margin: 5px;
+    height: 7vw; 
+    max-height: 60px; 
   }
 `;
 
@@ -295,18 +297,19 @@ const Projects = styled.div`
   background-color: #172042;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const OneProject = styled.div`
-  width: 99%;
-  height: auto;
+  width: 80%;
   margin: 5px;
-  background-color: #144258;
+  background-color: #01040B;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  background-color: #0B3C5E;
   div {
     display: flex;
     justify-content: center;
@@ -315,45 +318,43 @@ const OneProject = styled.div`
   }
   p {
     font-family: 'Teko', sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem; 
     color: white;
     margin-left: 5px;
     text-align: center;
   }
   img {
     max-width: 100%;
-    margin: 8px;
-    height: 320px;
+    height: auto;
   }
 `;
 
 const SecondProject = styled.div`
-  width: 99%;
-  height: auto;
+  width: 80%;
   margin: 5px;
-  background-color: #144258;
+  background-color: #01040B;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  background-color: #0B3C5E;
   div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
   p {
     font-family: 'Teko', sans-serif;
-    font-size: 20px;
+    font-size: 1.5rem; 
     color: white;
     margin-left: 5px;
     text-align: center;
   }
   img {
-    max-width: 95%;
-    margin: 5px;
-    height: 270px;
+    max-width: 100%;
+    height: auto;
   }
 `;
 
