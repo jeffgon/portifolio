@@ -8,6 +8,7 @@ import gmail from './assets/gmail.png';
 import gifmywallet from "./assets/gifmywallet.gif";
 import g2 from './assets/g2.png';
 import g3 from './assets/g3.png';
+import perfil2 from './assets/perfil2.jpeg'
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
         </Buttons>
 
         <Home id='contact'>
-          <img src={icone} alt='Ícone' />
+          <Perfil src={perfil2} alt='Ícone' />
           <div>
             <h1>Jefferson Gonçalves</h1>
             <h2>Desenvolvedor Fullstack</h2>
@@ -117,19 +118,22 @@ function App() {
           </OneProject>
 
           <SecondProject>
-            <p>
-              Desenvolvi o Gamebox, um app em desenvolvimento com cadastro, login, jogos, avaliações 
-              e interface responsiva usando React Vite. No servidor, estou utilizando Node.js com rotas, 
-              controladores, serviços e Prisma com PostgreSQL para armazenar dados. Os recursos incluem 
-              autenticação JWT, criptografia de senhas e validação de dados com JOI.
-              Repositório Github: <LinkGit href='https://github.com/jeffgon/gamebox' target='_blank'>https://github.com/jeffgon/gamebox</LinkGit>
-            </p>
+            <Content>
+              <p>
+                Desenvolvi o Gamebox, um app em desenvolvimento com cadastro, login, jogos, avaliações 
+                e interface responsiva usando React Vite. No servidor, estou utilizando Node.js com rotas, 
+                controladores, serviços e Prisma com PostgreSQL para armazenar dados. Os recursos incluem 
+                autenticação JWT, criptografia de senhas e validação de dados com JOI.
+                Repositório Github: <LinkGit href='https://github.com/jeffgon/gamebox' target='_blank'>https://github.com/jeffgon/gamebox</LinkGit>
+              </p>
+            </Content>
 
-            <div>
-              <img height='50' src={g2} />
-              <img height='50' src={g3} />
-            </div>
-          </SecondProject>
+            <ImageContainer>
+              <img src={g2} alt="Game Screenshot 1" />
+              <img src={g3} alt="Game Screenshot 2" />
+            </ImageContainer>
+        </SecondProject>
+
         </Projects>
 
       </Container>
@@ -141,6 +145,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+const Perfil = styled.img`
+  width: 300px;
+  height: auto;
+  border-radius: 150px;
 `;
 
 const Buttons = styled.div`
@@ -221,10 +231,6 @@ const Image = styled.img`
 
 const LinkImagem = styled.a`
   text-decoration: none;
-`;
-
-const LinkGit = styled.a`
-  color: white;
 `;
 
 const About = styled.div`
@@ -327,35 +333,61 @@ const OneProject = styled.div`
     max-width: 100%;
     height: auto;
   }
+
+  @media (max-width: 768px) {
+    width: 100%; 
+  }
 `;
 
 const SecondProject = styled.div`
   width: 80%;
   margin: 5px;
   background-color: #01040B;
+  border-radius: 5px;
+  background-color: #0B3C5E;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  background-color: #0B3C5E;
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 100%; 
   }
+`;
+
+const Content = styled.div`
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
   p {
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem; 
     color: white;
-    margin-left: 5px;
     text-align: center;
+    margin-bottom: 10px;
   }
+`;
+
+const LinkGit = styled.a`
+  color: white;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  word-break: break-all;
+`;
+
+const ImageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
   img {
     max-width: 100%;
     height: auto;
   }
 `;
+
 
 export default App;
